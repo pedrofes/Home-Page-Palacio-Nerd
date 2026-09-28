@@ -43,6 +43,8 @@ footer{
     font-size: 30px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .recentes {
@@ -50,7 +52,7 @@ footer{
     padding-left: 35px;
     padding-top: 20px;
     font-size: 30px;
-    font-weight: 800px;
+    font-weight: 600;
 }
 
 .divisor-central {
@@ -73,7 +75,10 @@ footer{
 .icones {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+}
+
+.icones img {
     width: 20px;
     height: 20px;
-    justify-content: right;
 }
