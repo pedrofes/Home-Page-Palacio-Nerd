@@ -47,12 +47,19 @@ footer{
     align-items: center;
 }
 
+.navbar a {
+    color: #FFC43D;
+    text-decoration: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
 .recentes {
     color: #FFC43D;
     padding-left: 35px;
     padding-top: 20px;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .divisor-central {
