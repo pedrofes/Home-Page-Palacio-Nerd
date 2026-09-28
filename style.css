@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Black Ops One', system-ui, sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+body{
+    margin: 0;
+}
+
+footer,
+.logo {
+   background-color: #240066; 
+}
+
+.navbar{
+    background-color: #6C20FF;
+    color: #FFC43D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+main{
+    background-color: #FFFAFA;
+}
+
+footer{
+    color: #FFC43D;
+    margin-top: 20px;
+    padding: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.recentes {
+    color: #FFC43D;
+    padding-left: 35px;
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: 800px;
+}
+
+.divisor-central {
+    width: 50%;           /* Define que a linha ocupará 50% da largura do main */
+    margin: 40px auto;    /* O "auto" centraliza a linha horizontalmente; 40px é o espaço vertical */
+    border: none;         /* Remove a borda padrão tridimensional do navegador */
+    border-top: 2px solid  #6C20FF; /* Cria uma linha sólida simples e cinza */
+}
+
+.categorias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 150px;
+    padding-top: 0;
+    font-size: 27px;
+    color: #FFC43D;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height: 20px;
+    justify-content: right;
+}
