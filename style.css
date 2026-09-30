@@ -52,6 +52,11 @@ footer{
     text-decoration: none;
     padding-bottom: 10px;
     padding-top: 10px;
+    transition: transform 0.2s ease; /* Para gerar uma sensação de transição suave */
+}
+
+.navbar a:hover{
+    transform: scale(1.1); /* Aumenta a escala da imagem para 110% */
 }
 
 .recentes {
@@ -73,9 +78,139 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 150px;
+    padding: 120px;
     padding-top: 0;
+    gap: 20px;
     font-size: 27px;
+    color: #FFC43D;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.filmes,
+.series,
+.animes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+}
+
+.filmes a,
+.series a,
+.animes a {
+    text-align: center;
+    text-decoration: none;
+    color: #FFC43D;
+    transition: transform 0.2s ease;
+}
+
+.filmes a:hover,
+.series a:hover,
+.animes a:hover {
+    transform: scale(1.1);
+}
+
+.noticias-recentes{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.noticias-recentes img {
+    width: 100%;  /* ocupa a largura do elemento pai */
+    display: block; /* comporta-se como bloco */
+    object-fit: cover; /* controla como a imagem será ajustada */
+}
+
+.noticia-principal, /*Permite que as imagens atinjam uma largura mínima de 0*/
+.noticias-secundarias {
+    min-width: 0;
+}
+
+.noticia-principal,
+.noticia {
+    position: relative; /* vira referência dentro do bloco */
+}
+
+.noticia-principal p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(36, 0, 102, 0.85);
+    color: white;
+    font-size: 30px;
+}
+
+.noticia p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(36, 0, 102, 0.85);
+    color: white;
+    font-size: 18px;
+}
+
+.noticia-principal{
+    flex: 2;
+}
+
+.noticias-secundarias{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.video-destaque {
+    padding-left: 35px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #FFC43D;
+}
+
+.video-conteudo {
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFC43D;
+
+}
+
+.video img {
+    width: 100%;  /* ocupa a largura do elemento pai */
+    display: block; /* comporta-se como bloco */
+    object-fit: cover; /* controla como a imagem será ajustada */
+}
+
+.video-descricao {
+    font-size: 20px;
+    font-weight: 300;
+    color: #FFC43D;
+}
+
+.video {
+    flex: 2;
+}
+
+.video-info {
+    flex: 1;
+}
+
+.descricao {
+    font-size: 18px;
+    font-weight: 300;
     color: #FFC43D;
 }
 
@@ -88,4 +223,13 @@ footer{
 .icones img {
     width: 20px;
     height: 20px;
+    transition: transform 0.2s ease;
+}
+
+.icones img{
+    transition: transform 0.2s ease;
+}
+
+.icones img:hover{ 
+    transform: scale(1.3);
 }
