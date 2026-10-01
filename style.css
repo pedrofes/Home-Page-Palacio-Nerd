@@ -52,11 +52,11 @@ footer{
     text-decoration: none;
     padding-bottom: 10px;
     padding-top: 10px;
-    transition: transform 0.2s ease; /* Para gerar uma sensação de transição suave */
+    transition: transform 0.2s ease;
 }
 
 .navbar a:hover{
-    transform: scale(1.1); /* Aumenta a escala da imagem para 110% */
+    transform: scale(1.1);
 }
 
 .recentes {
@@ -68,10 +68,10 @@ footer{
 }
 
 .divisor-central {
-    width: 50%;           /* Define que a linha ocupará 50% da largura do main */
-    margin: 40px auto;    /* O "auto" centraliza a linha horizontalmente; 40px é o espaço vertical */
-    border: none;         /* Remove a borda padrão tridimensional do navegador */
-    border-top: 2px solid  #6C20FF; /* Cria uma linha sólida simples e cinza */
+    width: 50%;
+    margin: 40px auto;
+    border: none;
+    border-top: 2px solid #6C20FF;
 }
 
 .categorias {
@@ -121,19 +121,44 @@ footer{
 }
 
 .noticias-recentes img {
-    width: 100%;  /* ocupa a largura do elemento pai */
-    display: block; /* comporta-se como bloco */
-    object-fit: cover; /* controla como a imagem será ajustada */
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border: 1px solid black;
 }
 
-.noticia-principal, /*Permite que as imagens atinjam uma largura mínima de 0*/
+.noticia-principal,
 .noticias-secundarias {
     min-width: 0;
 }
 
 .noticia-principal,
 .noticia {
-    position: relative; /* vira referência dentro do bloco */
+    position: relative;
+}
+
+.noticia a {
+    display: block;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.noticia a:hover {
+    transform: scale(1.05);
+}
+
+.noticia-principal a {
+    display: block;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.noticia-principal a:hover {
+    transform: scale(1.05);
 }
 
 .noticia-principal p {
@@ -146,6 +171,12 @@ footer{
     background-color: rgba(36, 0, 102, 0.85);
     color: white;
     font-size: 30px;
+    border-right: 0;
+    pointer-events: none;
+}
+
+.noticia-principal img {
+    display: block;
 }
 
 .noticia p {
@@ -168,6 +199,7 @@ footer{
     display: flex;
     flex-direction: column;
     flex: 1;
+    border-left: 0;
 }
 
 .video-destaque {
@@ -185,13 +217,12 @@ footer{
     font-size: 20px;
     font-weight: 400;
     color: #FFC43D;
-
 }
 
 .video img {
-    width: 100%;  /* ocupa a largura do elemento pai */
-    display: block; /* comporta-se como bloco */
-    object-fit: cover; /* controla como a imagem será ajustada */
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .video-descricao {
