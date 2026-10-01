@@ -3,20 +3,21 @@
     font-family: 'Black Ops One', system-ui, sans-serif;
 }
 
-header{
+header {
     text-align: center;
 }
 
-body{
+body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 footer,
 .logo {
-   background-color: #240066; 
+    background-color: #240066;
 }
 
-.navbar{
+.navbar {
     background-color: #6C20FF;
     color: #FFC43D;
     display: flex;
@@ -30,11 +31,11 @@ footer,
     font-weight: 700;
 }
 
-main{
+main {
     background-color: #FFFAFA;
 }
 
-footer{
+footer {
     color: #FFC43D;
     margin-top: 20px;
     padding: 50px;
@@ -55,8 +56,19 @@ footer{
     transition: transform 0.2s ease;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .recentes {
@@ -83,10 +95,19 @@ footer{
     gap: 20px;
     font-size: 27px;
     color: #FFC43D;
-    display: flex;
-    flex-direction: row;
     text-align: center;
-    justify-content: space-between;
+}
+
+h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .filmes,
@@ -113,7 +134,7 @@ footer{
     transform: scale(1.1);
 }
 
-.noticias-recentes{
+.noticias-recentes {
     display: flex;
     justify-content: center;
     width: 90%;
@@ -137,18 +158,7 @@ footer{
     position: relative;
 }
 
-.noticia a {
-    display: block;
-    position: relative;
-    color: inherit;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-}
-
-.noticia a:hover {
-    transform: scale(1.05);
-}
-
+.noticia a,
 .noticia-principal a {
     display: block;
     position: relative;
@@ -157,6 +167,7 @@ footer{
     transition: transform 0.2s ease;
 }
 
+.noticia a:hover,
 .noticia-principal a:hover {
     transform: scale(1.05);
 }
@@ -191,11 +202,11 @@ footer{
     font-size: 18px;
 }
 
-.noticia-principal{
+.noticia-principal {
     flex: 2;
 }
 
-.noticias-secundarias{
+.noticias-secundarias {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -225,12 +236,6 @@ footer{
     object-fit: cover;
 }
 
-.video-descricao {
-    font-size: 20px;
-    font-weight: 300;
-    color: #FFC43D;
-}
-
 .video {
     flex: 2;
 }
@@ -257,10 +262,132 @@ footer{
     transition: transform 0.2s ease;
 }
 
-.icones img{
-    transition: transform 0.2s ease;
+.icones img:hover {
+    transform: scale(1.3);
 }
 
-.icones img:hover{ 
-    transform: scale(1.3);
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #FFC43D;
+        font-size: 28px;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-links.menu-aberto {
+        display: flex;
+    }
+
+    .recentes {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .noticias-recentes {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .noticia-principal {
+        flex: none;
+    }
+
+    .noticias-secundarias {
+        flex: none;
+        width: 100%;
+    }
+
+    .noticia-principal p {
+        position: static;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .noticia p {
+        position: static;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .categorias {
+        padding: 30px 15px;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .filmes,
+    .series,
+    .animes {
+        gap: 25px;
+        min-width: 0;
+    }
+
+    .video-destaque {
+        padding-left: 15px;
+        padding-top: 15px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .video-conteudo {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .video {
+        flex: none;
+    }
+
+    .video-info {
+        flex: none;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer p {
+        margin: 0;
+        max-width: 250px;
+    }
+
+    .icones {
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .noticia a:hover,
+    .noticia-principal a:hover {
+        transform: none;
+    }
 }

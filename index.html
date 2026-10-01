@@ -15,18 +15,34 @@
 <body>
 
     <header>
+
+        <h1>Palácio Nerd</h1>
+
         <div class="logo">
             <img src="assets/images/Logo Palácio Nerd.png" alt="Logo do Palácio Nerd" style="width: 220px; height: 150px;">
         </div>
 
         <nav class="navbar">
-            <a href="#">Artigos</a>
-            <a href="#">Séries</a>
-            <a href="#">Filmes</a>
-            <a href="#">Livros</a>
-            <a href="#">Animes</a>
-            <a href="#">Mangás</a>
-            <a href="#">Jogos</a>
+
+            <button 
+                type="button"
+                class="menu-toggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menu-links">
+                ☰
+            </button>
+
+            <div class="menu-links" id="menu-links">
+                <a href="#">Artigos</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Livros</a>
+                <a href="#">Animes</a>
+                <a href="#">Mangás</a>
+                <a href="#">Jogos</a>
+            </div>
+
         </nav>
 
     </header>
@@ -53,8 +69,8 @@
                     </div>
 
                     <div class="noticia">
-                        <a>
-                            <img src="assets\images\lanternas.jpg" alt="Divulgação da série Lanternas">
+                        <a href="#">
+                            <img src="assets/images/lanternas.jpg" alt="Divulgação da série Lanternas">
                             <p>Lanternas chega ao último episódio de sua 1ª temporada</p>
                         </a>
                     </div>
@@ -64,7 +80,7 @@
         </section>
 
         <!-- Linha divisória -->
-         <hr class="divisor-central">
+        <hr class="divisor-central">
 
         <section class="categorias">
             <div class="filmes">
@@ -72,7 +88,7 @@
 
                 <a href="#">Novo Resident Evil divide opiniões</a>
                 <a href="#">Digger estreia nos cinemas nesta semana</a>
-                <a href="#">Estúdio ddivulga a data de estreia de Anjos da Lei 3</a>
+                <a href="#">Estúdio divulga a data de estreia de Anjos da Lei 3</a>
 
             </div>
 
@@ -82,7 +98,6 @@
                 <a href="#">Primeira temporada de Stuart não Consegue Salvar o Universo chega ao fim</a>
                 <a href="#">Jornal escolhe as 100 melhores séries do século</a>
                 <a href="#">Martin e Charlie Sheen vão trabalhar juntos em série</a>
-
 
             </div>
 
@@ -97,7 +112,6 @@
         
         </section>
 
-        
         <hr class="divisor-central">
 
         <section class="video-destaque">
@@ -105,11 +119,11 @@
 
             <div class="video-conteudo">
                 <div class="video">
-                    <img src="assets/images/vingadores-encore.webp" alt="Divulgação do filme Vingadores Ultimato: Encore">
+                    <img src="assets/images/vingadores-encore.webp" alt="Imagem promocional do filme Vingadores Ultimato: Encore">
                 </div>
 
                 <div class="video-info">
-                    <h3 class="titulo-descricao">Novas cenas de apresentadas por Vingadores Ultimato: Encore</h3>
+                    <h3 class="titulo-descricao">Novas cenas de Vingadores Ultimato: Encore são apresentadas</h3>
                     <p class="descricao">O novo corte de Vingadores Ultimato prepara os fãs para a estreia de Vingadores Doomsday, com cenas inéditas do MCU.</p>
                 </div>
             </div>
@@ -122,18 +136,35 @@
 
         <nav class="icones">
             <a href="#">
-                <img src="assets/images/Instagram.png" alt="Logo Instagram">
+                <img src="assets/images/Instagram.png" alt="Instagram">
             </a>
             <a href="#">
-                <img src="assets/images/Youtube.png" alt="Logo Youtube">
+                <img src="assets/images/Youtube.png" alt="Youtube">
             </a>
             <a href="#">
-                <img src="assets/images/mark_email_unread.png" alt="Logo Email">
+                <img src="assets/images/mark_email_unread.png" alt="Email">
             </a>
         </nav>
 
-
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.querySelector('.menu-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuLinks.classList.toggle('menu-aberto');
+
+            const menuAberto = menuLinks.classList.contains('menu-aberto');
+
+            menuToggle.setAttribute('aria-expanded', menuAberto);
+
+            menuToggle.setAttribute(
+                'aria-label',
+                menuAberto ? 'Fechar menu' : 'Abrir menu'
+            );
+        });
+    </script>
 
 </body>
 
