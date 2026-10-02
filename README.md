@@ -61,12 +61,13 @@ palacio-nerd/
 ├── index.html
 ├── style.css
 └── README.md
+```
 
-## Visualização do projeto
+## Visualização
 
 O projeto poderá ser acessado online por meio do GitHub Pages.
 
-[Acesse o projeto online](https://pedrofes.github.io/Home-Page-Palacio-Nerd/))
+[Acesse o projeto online](https://pedrofes.github.io/Home-Page-Palacio-Nerd/)
 
 ## Autor
 
